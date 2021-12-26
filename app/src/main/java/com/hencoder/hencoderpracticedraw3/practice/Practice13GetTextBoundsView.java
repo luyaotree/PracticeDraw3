@@ -56,5 +56,10 @@ public class Practice13GetTextBoundsView extends View {
         canvas.drawText(text4, 400, middle, paint2);
         canvas.drawText(text5, 500, middle, paint2);
         canvas.drawText(text6, 600, middle, paint2);
+
+        // 题目的意思是先画好红框，然后让文字让红框里面居中画。所以需要动态的计算每个文字的高度，计算的方法是通过
+        // Paint.getTextBounds()计算出文字的高度，然后除以2，就拿到一半的文字高度，再加上红框高度的一半，就是
+        // 绘制文字坐标的Y值。https://rengwuxian.com/ui-1-3/ 中的getTextBounds介绍的是给文字画外边框，都是通过
+        // 计算文字的显示范围。
     }
 }
